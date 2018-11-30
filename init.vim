@@ -32,6 +32,15 @@ Plug 'itchyny/vim-gitbranch'
 
 Plug 'henrik/vim-indexed-search'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
 call plug#end()
 
 
@@ -53,11 +62,11 @@ set foldlevel=2
 set smartindent
 set autoindent
 
-set shiftwidth=2
+set shiftwidth=4
 set smarttab
 set expandtab
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=4
 
 set scrolloff=5
 
@@ -70,6 +79,8 @@ set ignorecase
 set nobackup
 set noswapfile
 set nowritebackup
+
+set autowrite
 
 " working with system clipboard
 set clipboard+=unnamed
