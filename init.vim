@@ -53,11 +53,11 @@ set foldlevel=2
 set smartindent
 set autoindent
 
-set shiftwidth=2
+set shiftwidth=4
 set smarttab
 set expandtab
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=4
 
 set scrolloff=5
 
@@ -255,11 +255,11 @@ let g:lightline = {
       \ }
 set noshowmode   " don't show current vim mode in the status line
 
-augroup AutoSaveFolds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
+"augroup AutoSaveFolds
+  "autocmd!
+  "autocmd BufWinLeave * mkview
+  "autocmd BufWinEnter * silent! loadview
+"augroup END
 
 set number
 
@@ -268,3 +268,6 @@ set number
 "autocmd FileType tex map <F33> :w<CR>:!pdflatex "%"<CR>:!xreader "%:r".pdf<CR>
 "autocmd FileType tex map <F33> :cd ~/Dropbox/Thesis/Script <CR>:!latexmk -pdf -pvc <CR>
 autocmd FileType tex map <F33> :cd ~/Projects/thesis-script <CR>:!make <CR>
+
+" vim-gitgutter : set update time to 100ms
+set updatetime=100 
