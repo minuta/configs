@@ -247,9 +247,6 @@ nnoremap <F2> :buffers<CR>:buffer<Space>
 
 tnoremap <Esc> <C-\><C-n>:q!<CR>
 
-" update time for git gutter
-set updatetime=100
-
 " \   'left': [ [ 'mode', 'paste' ],
 
 let g:lightline = { 'colorscheme': 'jellybeans' }
