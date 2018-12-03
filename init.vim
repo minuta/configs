@@ -41,7 +41,7 @@ Plug 'henrik/vim-indexed-search'
 "endif
 "let g:deoplete#enable_at_startup = 1
 
-call plug#end()
+call plug#end() 
 
 
 " basic configurations
@@ -279,3 +279,7 @@ autocmd FileType tex map <F33> :cd ~/Projects/thesis-script <CR>:!make <CR>
 
 " vim-gitgutter : set update time to 100ms
 set updatetime=100 
+
+" map leader (default = Bachslash) to Space
+let mapleader = "\<Space>"
+
