@@ -31,6 +31,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
 Plug 'henrik/vim-indexed-search'
+Plug 'FooSoft/vim-argwrap'
 
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -223,7 +224,7 @@ vnoremap gcc :call NERDComment(0,"toggle")<CR>
 
 " compile only current C++ file with Ctrl+F9
 "noremap <silent> <F33> :!clear<CR> :!g++ -Wall -std=c++11 % -o %< && ./%< <cr>
-noremap <silent> <F33> :!clear<CR> :!g++ -Wall -std=c++11 % -o %< && ./%< <cr>
+noremap <silent> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
 
 " compile only current C file with Ctrl+F9
 "noremap <silent> <F33> :!clear<CR> :!gcc -Wall -std=c11 % -o %< && ./%< <cr>
@@ -283,3 +284,4 @@ set updatetime=100
 " map leader (default = Bachslash) to Space
 let mapleader = "\<Space>"
 
+let g:argwrap_wrap_closing_brace = 0
