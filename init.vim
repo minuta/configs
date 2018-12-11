@@ -32,6 +32,7 @@ Plug 'itchyny/vim-gitbranch'
 
 Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
+Plug 'mhinz/vim-startify'
 
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -157,7 +158,7 @@ set path+=/home/qp/Projects/ns-3.29/build/
 let g:ackprg = 'ag --column --nocolor --nogroup'
 "cnoreabbrev Ack Ack!
 "cnoreabbrev ack Ack! 
-nnoremap <Leader>a :Ack!<Space>
+"nnoremap <Leader>a :Ack!<Space>
 
 "let g:ackhighlight = 1
 let g:ack_autoclose = 1
