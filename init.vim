@@ -286,3 +286,12 @@ set updatetime=100
 let mapleader = "\<Space>"
 
 let g:argwrap_wrap_closing_brace = 0
+
+" open last edited file automatically (else use startify plugin)
+"autocmd VimEnter * nested
+      "\  if argc() == 0
+      "\|   let last = filter(filter(copy(v:oldfiles), 'match(v:val, getcwd()) == 0'), 'filereadable(v:val)')
+      "\|   if !empty(last)
+      "\|     execute 'edit' fnameescape(last[0])
+      "\|   endif
+      "\| endif
