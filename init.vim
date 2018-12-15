@@ -295,3 +295,6 @@ let g:argwrap_wrap_closing_brace = 0
       "\|     execute 'edit' fnameescape(last[0])
       "\|   endif
       "\| endif
+
+" write all files and exit
+nnoremap <leader><leader> :xa<cr>
