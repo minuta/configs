@@ -298,3 +298,6 @@ let g:argwrap_wrap_closing_brace = 0
 
 " write all files and exit
 nnoremap <leader><leader> :xa<cr>
+
+map Q :qa<CR>
+map W :xa<CR>
