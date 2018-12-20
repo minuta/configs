@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'yegappan/mru'
+"Plug 'yegappan/mru'
 "Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -19,13 +19,14 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
-Plug 'sakhnik/nvim-gdb'
+"Plug 'sakhnik/nvim-gdb'
 Plug 'kshenoy/vim-signature'
 
 " colorschemas
 Plug 'crusoexia/vim-monokai'
 Plug 'joshdick/onedark.vim/'
 Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
 
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
@@ -33,6 +34,7 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
 Plug 'mhinz/vim-startify'
+Plug 'ctrlpvim/ctrlp.vim'
 
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -301,3 +303,5 @@ nnoremap <leader><leader> :xa<cr>
 
 map Q :qa<CR>
 map W :xa<CR>
+
+"let g:gitgutter_highlight_lines = 1
