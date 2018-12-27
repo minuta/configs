@@ -35,6 +35,9 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
 Plug 'mhinz/vim-startify'
+
+Plug 'vimwiki/vimwiki'
+
 "Plug 'ctrlpvim/ctrlp.vim'
 
 "if has('nvim')
@@ -120,7 +123,7 @@ nnoremap <down> :resize -1<cr>
 
 
 " Shortcuts and configs for plugins
-silent! map <C-m> :MRU<CR>
+"silent! map <C-m> :MRU<CR>
 
 "let g:NERDTreeWinPos = "left"
 "let NERDTreeIgnore=['\.o$', '\~$'] "ignore files in NERDTree
@@ -299,7 +302,7 @@ let g:argwrap_wrap_closing_brace = 0
       "\|   endif
       "\| endif
 
-" write all files and exit
+" write all files and exit on double space
 nnoremap <leader><leader> :xa<cr>
 
 map Q :qa<CR>
@@ -334,3 +337,32 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" remove netrw help banner
+let g:netrw_banner = 0
+" set tree view
+let g:netrw_liststyle = 3
+" call netrw in vertical split
+map <c-n> :Vex<CR>
+
+" vimwiki configuration ----------------------------------------------------------------------------------------------------
+" vimwiki header colors
+hi VimwikiHeader1 guifg=#FF0000
+hi VimwikiHeader2 guifg=#00FF00
+hi VimwikiHeader3 guifg=#0000FF
+hi VimwikiHeader4 guifg=#FF00FF
+hi VimwikiHeader5 guifg=#00FFFF
+hi VimwikiHeader6 guifg=#FFFF00
+
+
+let g:vimwiki_list = [{'auto_tags': 1}]
+
+autocmd FileType markdown let g:indentLine_enabled=0
+let g:vimwiki_url_maxsave = 0
+
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+let g:vimwiki_list = [wiki]
+
+"let g:vimwiki_folding='syntax'
+" vimwiki configuration ----------------------------------------------------------------------------------------------------
