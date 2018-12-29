@@ -346,9 +346,9 @@ map <c-n> :Vex<CR>
 
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
 " vimwiki header colors
-hi VimwikiHeader1 guifg=#FF0000
-hi VimwikiHeader2 guifg=#00FF00
-hi VimwikiHeader3 guifg=#0000FF
+hi VimwikiHeader1 guifg=#5bef5b
+hi VimwikiHeader2 guifg=#f78cab
+hi VimwikiHeader3 guifg=#7dcfed
 hi VimwikiHeader4 guifg=#FF00FF
 hi VimwikiHeader5 guifg=#00FFFF
 hi VimwikiHeader6 guifg=#FFFF00
@@ -366,3 +366,12 @@ let g:vimwiki_list = [wiki]
 
 "let g:vimwiki_folding='syntax'
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
+"
+
+" redifine bold to color of Operator-Group in Vimwiki (red color)
+" see :hi for colors and https://github.com/vimwiki/vimwiki/issues/116
+"hi def link VimwikiBold Operator
+"hi def link VimwikiBold CursorLineNr
+hi VimwikiBold guifg=#f08787
+
+
