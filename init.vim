@@ -277,7 +277,7 @@ set noshowmode   " don't show current vim mode in the status line
   "autocmd BufWinEnter * silent! loadview
 "augroup END
 
-set number
+"set number
 
 " Latex shortcuts
 
