@@ -2,8 +2,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-"Plug 'yegappan/mru'
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -12,14 +10,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
 
-"Plug 'derekwyatt/vim-fswitch'
-"Plug 'vim-syntastic/syntastic'
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
-"Plug 'sakhnik/nvim-gdb'
 Plug 'kshenoy/vim-signature'
 
 " colorschemas
@@ -38,7 +31,9 @@ Plug 'mhinz/vim-startify'
 
 Plug 'vimwiki/vimwiki'
 
-"Plug 'ctrlpvim/ctrlp.vim'
+" Asynchronous linting/fixing for Vim
+Plug 'w0rp/ale'
+
 
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -381,3 +376,7 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+
+" call fzf from current dir
+map ; :Files<CR>
