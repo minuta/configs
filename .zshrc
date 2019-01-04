@@ -147,6 +147,8 @@ alias v='nvim'
 alias cdg='cd ~/Projects/ns-3.29/src/grail/ && pwd'
 alias cdn='cd ~/Projects/ns-3.29/ && pwd'
 
+alias emacs='emacs -nw'
+
 #alias rr='LD_LIBRARY_PATH=~/Projects/ns-3.29/build'
 
 setopt hist_ignore_all_dups
