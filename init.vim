@@ -369,6 +369,14 @@ let wiki.path = '~/vimwiki/'
 let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
 let g:vimwiki_list = [wiki]
 
+" timestamp
+nmap <F5> i<C-R>=strftime("%a %d-%m-%Y %H:%M")<CR><Esc>
+imap <F5> <C-R>=strftime("%a %d-%m-%Y %H:%M")<CR>
+
+nmap <F6> i<C-R>=strftime("%H:%M")<CR><Esc>
+imap <F6> <C-R>=strftime("%H:%M")<CR>
+
+
 "let g:vimwiki_folding='syntax'
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
 "
