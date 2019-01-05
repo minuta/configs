@@ -367,7 +367,9 @@ let g:vimwiki_url_maxsave = 0
 let wiki = {}
 let wiki.path = '~/vimwiki/'
 let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
-let g:vimwiki_list = [wiki]
+"let g:vimwiki_list = [wiki]
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " timestamp
 nmap <F5> i<C-R>=strftime("%a %d-%m-%Y %H:%M")<CR><Esc>
