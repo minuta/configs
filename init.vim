@@ -406,3 +406,9 @@ let g:ale_list_window_size = 5
 
 set wildmenu
 set wildmode=longest:full,full
+
+" highlight pmenu (autocomplete)
+"highlight PmenuSbar ctermbg=blue guifg=gray 
+highlight Pmenu guibg=gray guifg=black
+highlight PmenuSel guibg=white guifg=gray
+"highlight PmenuThumb ctermbg=blue guifg=blue 
