@@ -32,6 +32,10 @@ Plug 'mhinz/vim-startify'
 Plug 'vimwiki/vimwiki'
 
 " Asynchronous linting/fixing for Vim
+"
+"" Enable completion where available.
+" This setting must be set before ALE is loaded.
+let g:ale_completion_enabled = 1
 Plug 'w0rp/ale'
 
 
@@ -283,9 +287,6 @@ autocmd FileType tex map <F33> :cd ~/Projects/thesis-script <CR>:!make <CR>
 " vim-gitgutter : set update time to 100ms
 set updatetime=100 
 
-" map leader (default = Bachslash) to Space
-let mapleader = "\<Space>"
-
 let g:argwrap_wrap_closing_brace = 0
 
 " open last edited file automatically (else use startify plugin)
@@ -297,11 +298,20 @@ let g:argwrap_wrap_closing_brace = 0
       "\|   endif
       "\| endif
 
+" Custom mappings
+" ---------------------------------------------------------------------------
 " write all files and exit on double space
 nnoremap <leader><leader> :xa<cr>
 
 map Q :qa<CR>
 map W :xa<CR>
+imap jk <Esc>
+
+" map leader (default = Bachslash) to Space
+let mapleader = "\<Space>"
+
+
+" ---------------------------------------------------------------------------
 
 "let g:gitgutter_highlight_lines = 1
 "
@@ -380,3 +390,9 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " call fzf from current dir
 map ; :Files<CR>
+
+
+let g:ale_list_window_size = 5
+
+set wildmenu
+set wildmode=longest:full,full
