@@ -351,10 +351,10 @@ map <c-n> :Vex<CR>
 
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
 " vimwiki header colors
-hi VimwikiHeader1 guifg=#5bef5b
+hi VimwikiHeader1 guifg=#ea175a
 hi VimwikiHeader2 guifg=#f78cab
 hi VimwikiHeader3 guifg=#7dcfed
-hi VimwikiHeader4 guifg=#FF00FF
+hi VimwikiHeader4 guifg=#5bef5b
 hi VimwikiHeader5 guifg=#00FFFF
 hi VimwikiHeader6 guifg=#FFFF00
 
