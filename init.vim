@@ -388,6 +388,10 @@ imap <F6> <C-R>=strftime("%H:%M")<CR>
 "hi def link VimwikiBold Operator
 "hi def link VimwikiBold CursorLineNr
 hi VimwikiBold guifg=#f08787
+"hi VimwikiItalic guifg=#b588c9
+"hi VimwikiItalic guifg=#93ccd6 #a1d9e2
+hi VimwikiItalic guifg=#ce8ce2
+
 
 " map alt+j, alt+k to move line up or down
 nnoremap <A-j> :m .+1<CR>==
