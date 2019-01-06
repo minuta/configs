@@ -377,7 +377,7 @@ imap <F5> <C-R>=strftime("%a %d-%m-%Y %H:%M")<CR>
 
 nmap <F6> i<C-R>=strftime("%H:%M")<CR><Esc>
 imap <F6> <C-R>=strftime("%H:%M")<CR>
-
+let g:vimwiki_hl_cb_checked = 2
 
 "let g:vimwiki_folding='syntax'
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
