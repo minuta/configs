@@ -29,7 +29,9 @@ Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
 Plug 'mhinz/vim-startify'
 
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+"Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+
+Plug 'vimwiki/vimwiki'
 
 " Asynchronous linting/fixing for Vim
 "
@@ -365,7 +367,7 @@ autocmd FileType markdown let g:indentLine_enabled=0
 let g:vimwiki_url_maxsave = 0
 
 let wiki = {}
-let wiki.path = '~/vimwiki/'
+"let wiki.path = '~/vimwiki/'
 let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
 "let g:vimwiki_list = [wiki]
 let g:vimwiki_list = [{'path': '~/vimwiki/',
@@ -438,5 +440,3 @@ function! GetSyntax()
     exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
 endfunction
 "-------------------------------------------------------------------------
-"
-
