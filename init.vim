@@ -29,7 +29,7 @@ Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
 Plug 'mhinz/vim-startify'
 
-Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 " Asynchronous linting/fixing for Vim
 "
@@ -377,7 +377,6 @@ imap <F5> <C-R>=strftime("%a %d-%m-%Y %H:%M")<CR>
 
 nmap <F6> i<C-R>=strftime("%H:%M")<CR><Esc>
 imap <F6> <C-R>=strftime("%H:%M")<CR>
-let g:vimwiki_hl_cb_checked = 2
 
 "let g:vimwiki_folding='syntax'
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
@@ -416,3 +415,28 @@ set wildmode=longest:full,full
 highlight Pmenu guibg=gray guifg=black
 highlight PmenuSel guibg=white guifg=gray
 "highlight PmenuThumb ctermbg=blue guifg=blue 
+
+"hi def link VimwikiLinkT VimwikiLink
+"hi VimwikiLink guifg=#80a0ff gui=bold
+hi VimwikiLink guifg=#80a0ff 
+
+let g:vimwiki_hl_cb_checked = 2
+
+
+
+" ------------------------------- :call GetSyntax() to get current hi group
+function! GetSyntaxID()
+    return synID(line('.'), col('.'), 1)
+endfunction
+
+function! GetSyntaxParentID()
+    return synIDtrans(GetSyntaxID())
+endfunction
+
+function! GetSyntax()
+    echo synIDattr(GetSyntaxID(), 'name')
+    exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
+endfunction
+"-------------------------------------------------------------------------
+"
+
