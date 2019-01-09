@@ -163,7 +163,7 @@ set path+=/home/qp/Projects/ns-3.29/build/
 let g:ackprg = 'ag --column --nocolor --nogroup'
 "cnoreabbrev Ack Ack!
 "cnoreabbrev ack Ack! 
-"nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>a :Ag<Space>
 
 "let g:ackhighlight = 1
 let g:ack_autoclose = 1
@@ -212,6 +212,17 @@ noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
 noremap <silent> <F36> :!/home/qp/Projects/ns-3.29/waf --run %< <cr>
 
 let g:gitgutter_sign_removed_first_line = "^_"
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
+
+augroup VimDiff
+  autocmd!
+  autocmd VimEnter,FilterWritePre * if &diff | GitGutterDisable | endif
+augroup END
+
 
 map <F3> :bprevious<CR>
 map <F4> :bnext<CR>
@@ -241,7 +252,7 @@ set noshowmode   " don't show current vim mode in the status line
   "autocmd BufWinEnter * silent! loadview
 "augroup END
 
-set number
+"set number
 
 " Latex shortcuts
 
