@@ -29,8 +29,6 @@ Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
 Plug 'mhinz/vim-startify'
 
-"Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-
 Plug 'vimwiki/vimwiki'
 
 " Asynchronous linting/fixing for Vim
@@ -117,10 +115,10 @@ let g:monokai_thick_border = 1
 set splitbelow " open splits below
 set splitright  " open splits to the right
 
-nnoremap <left> :vertical resize +1<cr>
-nnoremap <right> :vertical resize -1<cr>
-nnoremap <up> :resize +1<cr>
-nnoremap <down> :resize -1<cr>
+"nnoremap <left> :vertical resize +1<cr>
+"nnoremap <right> :vertical resize -1<cr>
+"nnoremap <up> :resize +1<cr>
+"nnoremap <down> :resize -1<cr>
 
 
 " Shortcuts and configs for plugins
@@ -278,7 +276,7 @@ set noshowmode   " don't show current vim mode in the status line
   "autocmd BufWinEnter * silent! loadview
 "augroup END
 
-"set number
+set number
 
 " Latex shortcuts
 
