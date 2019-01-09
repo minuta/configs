@@ -189,41 +189,6 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_cpp_compiler = "g++"
-"let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall"
-"let g:clang_c_options = '--std=gnu11'
-
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_enable_highlighting = 1
-"let g:syntastic_c_check_header = 1
-"let g:syntastic_cpp_check_header = 1
-
-
-"let g:syntastic_mode_map = {
-    "\ "mode": "active",
-    "\ "active_filetypes": ["c++"],
-    "\ "passive_filetypes": ["puppet"] }
-
-"let g:syntastic_cpp_include_dirs = ['/home/qp/Projects/ns-3.29/build/']
-
-" config for youCompleteMe plugin
-"let g:ycm_global_ycm_extra_conf = '/home/qp/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"set completeopt-=preview
-"let g:ycm_autoclose_preview_window_after_insertion = 1
-
-" config for NerdCommenter
-nnoremap gcc :call NERDComment(0,"toggle")<CR>
-vnoremap gcc :call NERDComment(0,"toggle")<CR>
-
-"let g:syntastic_error_symbol = "✗"
-"let g:syntastic_warning_symbol = '⚠'
 
 " compile all C++ files
 "noremap <silent> <C-F9> :!g++ -Wall -std=c++11 -g *.cc && ./a.out<cr>
@@ -307,7 +272,7 @@ map Q :qa<CR>
 map W :xa<CR>
 imap jk <Esc>
 
-" map leader (default = Bachslash) to Space
+" map leader (default = Backslash) to Space
 let mapleader = "\<Space>"
 
 
