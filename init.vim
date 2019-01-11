@@ -278,7 +278,8 @@ let g:argwrap_wrap_closing_brace = 0
 " ---------------------------------------------------------------------------
 " write all files and exit on double space
 nnoremap <leader><leader> :xa<cr>
-nnoremap cc :call NERDComment(0,"toggle")<cr>
+"nnoremap cc :call NERDComment(0,"toggle")<cr>
+nnoremap cc :call NERDComment(0,"invert")<cr>
 
 map Q :qa<CR>
 map W :xa<CR>
