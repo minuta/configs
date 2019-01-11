@@ -278,10 +278,11 @@ let g:argwrap_wrap_closing_brace = 0
 " ---------------------------------------------------------------------------
 " write all files and exit on double space
 nnoremap <leader><leader> :xa<cr>
+nnoremap cc :call NERDComment(0,"toggle")<cr>
 
 map Q :qa<CR>
 map W :xa<CR>
-imap jk <Esc>
+imap hj <Esc>
 
 " map leader (default = Backslash) to Space
 let mapleader = "\<Space>"
