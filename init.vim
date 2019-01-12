@@ -252,13 +252,16 @@ set noshowmode   " don't show current vim mode in the status line
   "autocmd BufWinEnter * silent! loadview
 "augroup END
 
-"set number
+set number
+set nostartofline
+
 
 " Latex shortcuts
 
 "autocmd FileType tex map <F33> :w<CR>:!pdflatex "%"<CR>:!xreader "%:r".pdf<CR>
 "autocmd FileType tex map <F33> :cd ~/Dropbox/Thesis/Script <CR>:!latexmk -pdf -pvc <CR>
-autocmd FileType tex map <F33> :cd ~/Projects/thesis-script <CR>:!make <CR>
+" compile latex, make a pdf and open this pdf (Ctrl + F9)
+autocmd FileType tex map <F33> :cd ~/Projects/my-github-repos/thesis-script <CR>:!make <CR>
 
 " vim-gitgutter : set update time to 100ms
 set updatetime=100 
