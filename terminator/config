@@ -1,0 +1,33 @@
+[global_config]
+  extra_styling = False
+  handle_size = 1
+  inactive_color_offset = 1.0
+  scroll_tabbar = True
+  suppress_multiple_term_dialog = True
+  title_transmit_bg_color = "#ef2929"
+[keybindings]
+  layout_launcher = <Alt>slash
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.9
+    copy_on_selection = True
+    cursor_color = "#00ff24"
+    cursor_color_fg = False
+    cursor_shape = ibeam
+    font = Monospace 9
+    foreground_color = "#ebdbb2"
+    scrollback_infinite = True
+    scrollback_lines = 1500
+    scrollbar_position = hidden
+    show_titlebar = False
