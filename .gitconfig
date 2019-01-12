@@ -1,0 +1,72 @@
+[user]
+	name = AF
+    email = ""
+
+[alias]
+    # Checkouts
+    co = checkout
+    cob = checkout -b
+
+    # Commits
+    cm = commit -m
+    ;ca = !git add -A && git commit -m
+
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    #lg = log --decorate --graph --pretty=oneline --pretty=format:"%h - %an, %ar : %s" --abbrev-commit --all --date=relative
+    lg2 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
+    # show all files from commit hash (e.g. fi <HASH>)
+    ci = show --stat 
+    unstage = reset --  
+    # WORK with fetched but not merged commits -------------------------------------------------------------------------------------------------------------------
+    
+    # show fetched but not yet merged gcommits
+#     sfc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative HEAD..origin
+    sfc = !git lg HEAD..origin
+
+    # show changes in fetched commits for a given file:
+    sff = diff --name-status HEAD..origin
+
+    # show difs for all fetched changes
+    inspect = diff HEAD..origin
+	  d = difftool
+
+    # -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[merge]
+    tool = vimdiff
+[diff]
+	tool = vimdiff
+;[mergetool "vimdiff"]
+  ;cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+;[difftool "vimdiff"]
+  ;cmd = nvim -d $LOCAL $REMOTE
+[color]
+	ui = true
+[core]
+	autocrlf = false
+	safecrlf = false
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+# [push]
+#	default = simple
+[difftool]
+	prompt = false
+[push]
+	default = simple
+[mergetool "vimdiff"]
+	path = nvim
