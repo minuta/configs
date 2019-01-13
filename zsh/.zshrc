@@ -142,6 +142,7 @@ alias xclip='xclip -se c'
 alias rm='rm -i'
 alias cdc='cd -'
 
+alias nvim='~/Software/nvim.appimage'
 alias v='nvim'
 #alias vim='vim'
 alias cdg='cd ~/Projects/ns-3.29/src/grail/ && pwd'
