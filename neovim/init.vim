@@ -37,7 +37,7 @@ Plug 'vimwiki/vimwiki'
 " This setting must be set before ALE is loaded.
 let g:ale_completion_enabled = 1
 Plug 'w0rp/ale'
-
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -390,6 +390,10 @@ let g:ale_list_window_size = 5
 
 set wildmenu
 set wildmode=longest:full,full
+
+"set completeopt=longest,menuone
+set completeopt=menu,longest,menuone
+inoremap <expr> <CR>pumvisible() ? "\<C-y>" : "\<CR>"
 
 " highlight pmenu (autocomplete)
 "highlight PmenuSbar ctermbg=blue guifg=gray 
