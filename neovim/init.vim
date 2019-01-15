@@ -353,11 +353,11 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " timestamp
-nmap <F5> i<C-R>=strftime("%a %d-%m-%Y %H:%M")<CR><Esc>
-imap <F5> <C-R>=strftime("%a %d-%m-%Y %H:%M")<CR>
+nmap <F6> i<C-R>=strftime("%a %d-%m-%Y)<CR><Esc>
+imap <F6> <C-R>=strftime("%a %d-%m-%Y)<CR>
 
-nmap <F6> i<C-R>=strftime("%H:%M")<CR><Esc>
-imap <F6> <C-R>=strftime("%H:%M")<CR>
+nmap <F5> i<C-R>=strftime("%H:%M")<CR><Esc>
+imap <F5> <C-R>=strftime("%H:%M")<CR>
 
 "let g:vimwiki_folding='syntax'
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
@@ -393,7 +393,7 @@ set wildmode=longest:full,full
 
 "set completeopt=longest,menuone
 set completeopt=menu,longest,menuone
-inoremap <expr> <CR>pumvisible() ? "\<C-y>" : "\<CR>"
+"inoremap <expr> <CR>pumvisible() ? "\<C-y>" : "\<CR>"
 
 " highlight pmenu (autocomplete)
 "highlight PmenuSbar ctermbg=blue guifg=gray 
