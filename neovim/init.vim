@@ -353,8 +353,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " timestamp
-nmap <F6> i<C-R>=strftime("%a %d-%m-%Y)<CR><Esc>
-imap <F6> <C-R>=strftime("%a %d-%m-%Y)<CR>
+nmap <F6> i<C-R>=strftime("%a %d-%m-%Y")<CR><Esc>
+imap <F6> <C-R>=strftime("%a %d-%m-%Y")<CR>
 
 nmap <F5> i<C-R>=strftime("%H:%M")<CR><Esc>
 imap <F5> <C-R>=strftime("%H:%M")<CR>
