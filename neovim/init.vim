@@ -352,12 +352,12 @@ let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
-" timestamp
-nmap <F6> i<C-R>=strftime("%a %d-%m-%Y")<CR><Esc>
-imap <F6> <C-R>=strftime("%a %d-%m-%Y")<CR>
+" timestamps : current date and current time
+nmap <silent> <F5> i<C-R>=strftime("%H:%M")<CR><Esc>
+imap <silent> <F5> <C-R>=strftime("%H:%M")<CR>
 
-nmap <F5> i<C-R>=strftime("%H:%M")<CR><Esc>
-imap <F5> <C-R>=strftime("%H:%M")<CR>
+nmap <silent> <F6> i<C-R>=strftime("%a %d-%m-%Y")<CR><Esc>
+imap <silent> <F6> <C-R>=strftime("%a %d-%m-%Y")<CR>
 
 "let g:vimwiki_folding='syntax'
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
