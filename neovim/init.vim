@@ -1,5 +1,6 @@
 
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
