@@ -61,8 +61,8 @@ set nowrap
 set mouse=a
 
 
-set foldmethod=manual
-set foldlevel=2
+set foldmethod=syntax
+set foldlevel=1
 
 " wrap long lines
 "set linebreak
@@ -424,3 +424,4 @@ function! GetSyntax()
     exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
 endfunction
 "-------------------------------------------------------------------------
+"let g:vimwiki_folding='syntax'
