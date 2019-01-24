@@ -22,6 +22,7 @@ Plug 'joshdick/onedark.vim/'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'rakr/vim-one'
+Plug 'romainl/Apprentice'
 
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
@@ -29,7 +30,6 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
 Plug 'mhinz/vim-startify'
-
 Plug 'vimwiki/vimwiki'
 
 " Asynchronous linting/fixing for Vim
@@ -61,7 +61,7 @@ set nowrap
 set mouse=a
 
 
-set foldmethod=syntax
+set foldmethod=manual
 set foldlevel=1
 
 " wrap long lines
@@ -425,3 +425,4 @@ function! GetSyntax()
 endfunction
 "-------------------------------------------------------------------------
 "let g:vimwiki_folding='syntax'
+"
