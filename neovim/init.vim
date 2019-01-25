@@ -10,22 +10,19 @@ Plug 'junegunn/fzf.vim'
 " C++ plugins
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
-
 Plug 'bfrg/vim-cpp-modern'
+
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
 Plug 'kshenoy/vim-signature'
 
 " colorschemas
-Plug 'crusoexia/vim-monokai'
+"Plug 'crusoexia/vim-monokai'
+"Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'joshdick/onedark.vim/'
-
-Plug 'itchyny/lightline.vim'
-Plug 'itchyny/vim-gitbranch'
 
 Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
-Plug 'mhinz/vim-startify'
 Plug 'vimwiki/vimwiki'
 
 " Asynchronous linting/fixing for Vim
@@ -36,14 +33,6 @@ let g:ale_completion_enabled = 1
 Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
-"if has('nvim')
-  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
-  "Plug 'Shougo/deoplete.nvim'
-  "Plug 'roxma/nvim-yarp'
-  "Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-"let g:deoplete#enable_at_startup = 1
 
 call plug#end() 
 
@@ -57,8 +46,9 @@ set nowrap
 set mouse=a
 
 
-set foldmethod=manual
+"set foldmethod=manual
 set foldlevel=1
+set foldnestmax=1
 
 " wrap long lines
 "set linebreak
@@ -95,10 +85,6 @@ set termguicolors
 set t_Co=256
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
-"let MRU_Use_Current_Window = 1
-"let MRU_Window_Height = 15
-
-
 " syntax and theme
 syntax on
 filetype plugin indent on
@@ -120,11 +106,6 @@ set splitright  " open splits to the right
 
 
 " Shortcuts and configs for plugins
-"silent! map <C-m> :MRU<CR>
-
-"let g:NERDTreeWinPos = "left"
-"let NERDTreeIgnore=['\.o$', '\~$'] "ignore files in NERDTree
-"map <C-n> :NERDTreeToggle<CR>
 
 silent! map <C-d> :TagbarToggle<CR>
 
@@ -135,8 +116,8 @@ map <BS> :bprev<Return>
 
 
 " highlight the line number where cursor is on
-highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
-set cursorline
+"highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+"set cursorline
 
 " status line
 "hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
@@ -159,8 +140,6 @@ set path+=/home/qp/Projects/ns-3.29/build/
 
 " Ack and Ag plugin configuration
 let g:ackprg = 'ag --column --nocolor --nogroup'
-"cnoreabbrev Ack Ack!
-"cnoreabbrev ack Ack! 
 nnoremap <Leader>a :Ag<Space>
 
 "let g:ackhighlight = 1
@@ -171,33 +150,12 @@ let g:ack_autoclose = 1
 cnoreabbrev fzf FZF
 nnoremap <Leader>f :FZF<cr>
 
-" Customize fzf colors to match your color scheme
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-
-
-" compile all C++ files
-"noremap <silent> <C-F9> :!g++ -Wall -std=c++11 -g *.cc && ./a.out<cr>
-
 " compile only current C++ file with Ctrl+F9
 "noremap <silent> <F33> :!clear<CR> :!g++ -Wall -std=c++11 % -o %< && ./%< <cr>
 noremap <silent> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
 
 " compile only current C file with Ctrl+F9
 "noremap <silent> <F33> :!clear<CR> :!gcc -Wall -std=c11 % -o %< && ./%< <cr>
-"noremap <silent> <F33> :!clear<cr> :!gcc -Wall -std=c11 % -o %< && ./%< <cr>
 
 " run current C or C++ file with Ctrl+F10
 noremap <silent> <F34> :!clear<cr> :!./%< <cr>
@@ -228,27 +186,7 @@ nnoremap <F2> :buffers<CR>:buffer<Space>
 
 tnoremap <Esc> <C-\><C-n>:q!<CR>
 
-" \   'left': [ [ 'mode', 'paste' ],
-
-let g:lightline = { 'colorscheme': 'jellybeans' }
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-      \   'right': [ ['lineinfo'], ['percent'] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \  'colorscheme': 'jellybeans' 
-      \ }
 set noshowmode   " don't show current vim mode in the status line
-
-"augroup AutoSaveFolds
-  "autocmd!
-  "autocmd BufWinLeave * mkview
-  "autocmd BufWinEnter * silent! loadview
-"augroup END
 
 set number
 set nostartofline
@@ -265,15 +203,6 @@ autocmd FileType tex map <F33> :cd ~/Projects/my-github-repos/thesis-script <CR>
 set updatetime=100 
 
 let g:argwrap_wrap_closing_brace = 0
-
-" open last edited file automatically (else use startify plugin)
-"autocmd VimEnter * nested
-      "\  if argc() == 0
-      "\|   let last = filter(filter(copy(v:oldfiles), 'match(v:val, getcwd()) == 0'), 'filereadable(v:val)')
-      "\|   if !empty(last)
-      "\|     execute 'edit' fnameescape(last[0])
-      "\|   endif
-      "\| endif
 
 " Custom mappings
 " ---------------------------------------------------------------------------
@@ -292,32 +221,22 @@ let mapleader = "\<Space>"
 
 " ---------------------------------------------------------------------------
 
-"let g:gitgutter_highlight_lines = 1
-"
-"let g:ctrlp_map='<c-p>'
-"let g:ctrlp_cmd = 'CtrlPMRU'
-
 "use plugin fzf to get MRU files
 map <c-p> :History<CR>
-
-" In Neovim, you can set up fzf window using a Vim command
-let g:fzf_layout = { 'window': 'enew' }
-let g:fzf_layout = { 'window': '-tabnew' }
-let g:fzf_layout = { 'window': '10split enew' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
+  \ 'hl':      ['fg', 'Operator'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
   \ 'hl+':     ['fg', 'Statement'],
   \ 'info':    ['fg', 'PreProc'],
   \ 'border':  ['fg', 'Ignore'],
   \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
+  \ 'pointer': ['fg', 'Error'],
+  \ 'marker':  ['fg', 'Operator'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
@@ -389,19 +308,12 @@ let g:ale_list_window_size = 5
 set wildmenu
 set wildmode=longest:full,full
 
-"set completeopt=longest,menuone
 set completeopt=menu,longest,menuone
-"inoremap <expr> <CR>pumvisible() ? "\<C-y>" : "\<CR>"
-
-" highlight pmenu (autocomplete)
-"highlight PmenuSbar ctermbg=blue guifg=gray 
 
 "---------------- MONOKAI MENU ---------------------------
 "highlight Pmenu guibg=gray guifg=black
 "highlight PmenuSel guibg=white guifg=gray
 "---------------------------------------------------------
-
-"highlight PmenuThumb ctermbg=blue guifg=blue 
 
 "hi def link VimwikiLinkT VimwikiLink
 "hi VimwikiLink guifg=#80a0ff gui=bold
@@ -426,9 +338,4 @@ function! GetSyntax()
 endfunction
 "-------------------------------------------------------------------------
 let g:vimwiki_folding='expr'
-
-
-let g:lightline = {
-  \ 'colorscheme': 'onedark',
-  \ }
 
