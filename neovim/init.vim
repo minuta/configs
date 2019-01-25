@@ -1,3 +1,15 @@
+" onedark.vim override: Don't set a background color when running in a terminal;
+" just use the terminal's background color
+" `gui` is the hex color code used in GUI mode/nvim true-color mode
+" `cterm` is the color code used in 256-color mode
+" `cterm16` is the color code used in 16-color mode
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+  augroup END
+endif
 
 "------------------------- PLUG -----------------------------------------------
 call plug#begin()
@@ -13,13 +25,14 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'bfrg/vim-cpp-modern'
 
 Plug 'scrooloose/nerdcommenter'
-Plug 'Raimondi/delimitMate'
+"Plug 'Raimondi/delimitMate'
 Plug 'kshenoy/vim-signature'
 
-" colorschemas
+" Colorscheme plugins
 "Plug 'crusoexia/vim-monokai'
 "Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'joshdick/onedark.vim/'
+
 
 Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
@@ -164,16 +177,17 @@ noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
 noremap <silent> <F36> :!/home/qp/Projects/ns-3.29/waf --run %< <cr>
 
 let g:gitgutter_sign_removed_first_line = "^_"
-" GitGutter styling to use · instead of +/-
-let g:gitgutter_sign_added = '∙'
-let g:gitgutter_sign_modified = '∙'
-let g:gitgutter_sign_removed = '∙'
-let g:gitgutter_sign_modified_removed = '∙'
 
-augroup VimDiff
-  autocmd!
-  autocmd VimEnter,FilterWritePre * if &diff | GitGutterDisable | endif
-augroup END
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '█'
+let g:gitgutter_sign_modified = '█'
+let g:gitgutter_sign_removed = '█'
+let g:gitgutter_sign_modified_removed ='█'
+
+"augroup VimDiff
+  "autocmd!
+  "autocmd VimEnter,FilterWritePre * if &diff | GitGutterDisable | endif
+"augroup END
 
 
 map <F3> :bprevious<CR>
