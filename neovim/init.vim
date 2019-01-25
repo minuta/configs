@@ -25,8 +25,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'bfrg/vim-cpp-modern'
 
 Plug 'scrooloose/nerdcommenter'
-"Plug 'Raimondi/delimitMate'
-Plug 'kshenoy/vim-signature'
+Plug 'Raimondi/delimitMate'            " automatic closing of quotes, parenthesis, brackets, etc
+Plug 'kshenoy/vim-signature'           " plugin to place, toggle and display marks.
 
 " Colorscheme plugins
 "Plug 'crusoexia/vim-monokai'
@@ -35,7 +35,6 @@ Plug 'joshdick/onedark.vim/'
 
 
 Plug 'henrik/vim-indexed-search'
-Plug 'FooSoft/vim-argwrap'
 Plug 'vimwiki/vimwiki'
 
 let g:ale_completion_enabled = 1
