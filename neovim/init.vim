@@ -137,11 +137,6 @@ map <BS> :bprev<Return>
 " in the same directory)
 nnoremap <Space>h :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
-" configuration of plugin Fswitch
-"au! BufEnter *.cpp,*.cc,*.c let b:fswitchdst = 'h,hpp'    | let b:fswitchlocs = 'reg:/src/include/,../include,./'
-"au! BufEnter *.h,*.hpp      let b:fswitchdst = 'cpp,cc,c' | let b:fswitchlocs = 'reg:/include/src/,../src,./'
-"nmap <silent> <Leader>s :FSHere<cr>
-
 " set path for using with gf
 let &path.="/src/include,/usr/include/AL,/usr/include/c++/7,"
 set path+=/home/qp/Projects/ns-3.29/build/ 
@@ -183,12 +178,6 @@ let g:gitgutter_sign_modified = '█'
 let g:gitgutter_sign_removed = '█'
 let g:gitgutter_sign_modified_removed ='█'
 
-"augroup VimDiff
-  "autocmd!
-  "autocmd VimEnter,FilterWritePre * if &diff | GitGutterDisable | endif
-"augroup END
-
-
 map <F3> :bprevious<CR>
 map <F4> :bnext<CR>
 nnoremap <F2> :buffers<CR>:buffer<Space>
@@ -201,15 +190,11 @@ set number
 set nostartofline
 
 
-" Latex shortcuts
-
-"autocmd FileType tex map <F33> :w<CR>:!pdflatex "%"<CR>:!xreader "%:r".pdf<CR>
-"autocmd FileType tex map <F33> :cd ~/Dropbox/Thesis/Script <CR>:!latexmk -pdf -pvc <CR>
 " compile latex, make a pdf and open this pdf (Ctrl + F9)
 autocmd FileType tex map <F33> :cd ~/Projects/my-github-repos/thesis-script <CR>:!make <CR>
 
 " vim-gitgutter : set update time to 100ms
-set updatetime=100 
+set updatetime=10 
 
 let g:argwrap_wrap_closing_brace = 0
 
@@ -218,12 +203,12 @@ let g:argwrap_wrap_closing_brace = 0
 " write all files and exit on double space
 nnoremap <leader><leader> :xa<cr>
 "nnoremap cc :call NERDComment(0,"toggle")<cr>
+"vnoremap cc :call NERDComment(0,"toggle")<cr>
 nnoremap cc :call NERDComment(0,"invert")<cr>
 vnoremap cc :call NERDComment(0,"invert")<cr>
 
 map Q :qa<CR>
 map W :xa<CR>
-imap hj <Esc>
 
 " map leader (default = Backslash) to Space
 let mapleader = "\<Space>"
@@ -348,4 +333,3 @@ function! GetSyntax()
 endfunction
 "-------------------------------------------------------------------------
 let g:vimwiki_folding='expr'
-
