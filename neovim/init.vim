@@ -19,10 +19,6 @@ Plug 'kshenoy/vim-signature'
 " colorschemas
 Plug 'crusoexia/vim-monokai'
 Plug 'joshdick/onedark.vim/'
-Plug 'morhetz/gruvbox'
-Plug 'nanotech/jellybeans.vim'
-Plug 'rakr/vim-one'
-Plug 'romainl/Apprentice'
 
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
@@ -106,11 +102,12 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 " syntax and theme
 syntax on
 filetype plugin indent on
-"colorscheme onedark
-colorscheme monokai
-"colorscheme gruvbox
-set background=dark
+
 let g:monokai_thick_border = 1
+set background=dark
+
+colorscheme onedark
+"colorscheme monokai
 
 " splits
 set splitbelow " open splits below
@@ -398,8 +395,12 @@ set completeopt=menu,longest,menuone
 
 " highlight pmenu (autocomplete)
 "highlight PmenuSbar ctermbg=blue guifg=gray 
-highlight Pmenu guibg=gray guifg=black
-highlight PmenuSel guibg=white guifg=gray
+
+"---------------- MONOKAI MENU ---------------------------
+"highlight Pmenu guibg=gray guifg=black
+"highlight PmenuSel guibg=white guifg=gray
+"---------------------------------------------------------
+
 "highlight PmenuThumb ctermbg=blue guifg=blue 
 
 "hi def link VimwikiLinkT VimwikiLink
@@ -424,5 +425,10 @@ function! GetSyntax()
     exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
 endfunction
 "-------------------------------------------------------------------------
-"let g:vimwiki_folding='syntax'
-"
+let g:vimwiki_folding='expr'
+
+
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
+
