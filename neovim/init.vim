@@ -1,5 +1,5 @@
 
-"call plug#begin('~/.vim/plugged')
+"------------------------- PLUG -----------------------------------------------
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
@@ -25,16 +25,13 @@ Plug 'henrik/vim-indexed-search'
 Plug 'FooSoft/vim-argwrap'
 Plug 'vimwiki/vimwiki'
 
-" Asynchronous linting/fixing for Vim
-"
-"" Enable completion where available.
-" This setting must be set before ALE is loaded.
 let g:ale_completion_enabled = 1
 Plug 'w0rp/ale'
+
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
-
 call plug#end() 
+"------------------------------------------------------------------------------
 
 
 " basic configurations
@@ -44,7 +41,6 @@ set fileformat=unix
 set ruler  " always show cursor position
 set nowrap
 set mouse=a
-
 
 "set foldmethod=manual
 set foldlevel=1
@@ -85,12 +81,12 @@ set termguicolors
 set t_Co=256
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
-" syntax and theme
+
 syntax on
 filetype plugin indent on
 
-let g:monokai_thick_border = 1
-set background=dark
+"let g:monokai_thick_border = 1
+"set background=dark
 
 colorscheme onedark
 "colorscheme monokai
@@ -130,9 +126,9 @@ map <BS> :bprev<Return>
 nnoremap <Space>h :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " configuration of plugin Fswitch
-au! BufEnter *.cpp,*.cc,*.c let b:fswitchdst = 'h,hpp'    | let b:fswitchlocs = 'reg:/src/include/,../include,./'
-au! BufEnter *.h,*.hpp      let b:fswitchdst = 'cpp,cc,c' | let b:fswitchlocs = 'reg:/include/src/,../src,./'
-nmap <silent> <Leader>s :FSHere<cr>
+"au! BufEnter *.cpp,*.cc,*.c let b:fswitchdst = 'h,hpp'    | let b:fswitchlocs = 'reg:/src/include/,../include,./'
+"au! BufEnter *.h,*.hpp      let b:fswitchdst = 'cpp,cc,c' | let b:fswitchlocs = 'reg:/include/src/,../src,./'
+"nmap <silent> <Leader>s :FSHere<cr>
 
 " set path for using with gf
 let &path.="/src/include,/usr/include/AL,/usr/include/c++/7,"
