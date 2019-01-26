@@ -246,6 +246,7 @@ let g:netrw_liststyle = 3
 map <c-n> :Vex<CR>
 
 " vimwiki configuration ----------------------------------------------------------------------------------------------------
+
 " vimwiki header colors
 hi VimwikiHeader1 guifg=#ea175a
 hi VimwikiHeader2 guifg=#f78cab
@@ -267,17 +268,6 @@ let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
-" timestamps : current date and current time
-nmap <silent> <F5> i<C-R>=strftime("%H:%M")<CR><Esc>
-imap <silent> <F5> <C-R>=strftime("%H:%M")<CR>
-
-nmap <silent> <F6> i<C-R>=strftime("%a %d-%m-%Y")<CR><Esc>
-imap <silent> <F6> <C-R>=strftime("%a %d-%m-%Y")<CR>
-
-"let g:vimwiki_folding='syntax'
-" vimwiki configuration ----------------------------------------------------------------------------------------------------
-"
-
 " redifine bold to color of Operator-Group in Vimwiki (red color)
 " see :hi for colors and https://github.com/vimwiki/vimwiki/issues/116
 "hi def link VimwikiBold Operator
@@ -286,6 +276,24 @@ hi VimwikiBold guifg=#f08787
 "hi VimwikiItalic guifg=#b588c9
 "hi VimwikiItalic guifg=#93ccd6 #a1d9e2
 hi VimwikiItalic guifg=#ce8ce2
+
+"let g:vimwiki_folding='syntax'
+let g:vimwiki_folding='expr'
+
+"hi def link VimwikiLinkT VimwikiLink
+"hi VimwikiLink guifg=#80a0ff gui=bold
+hi VimwikiLink guifg=#80a0ff 
+
+let g:vimwiki_hl_cb_checked = 2
+
+" end of vimwiki configuration ----------------------------------------------------------------------------------------------------
+
+" timestamps : current date and current time
+nmap <silent> <F5> i<C-R>=strftime("%H:%M")<CR><Esc>
+imap <silent> <F5> <C-R>=strftime("%H:%M")<CR>
+
+nmap <silent> <F6> i<C-R>=strftime("%a %d-%m-%Y")<CR><Esc>
+imap <silent> <F6> <C-R>=strftime("%a %d-%m-%Y")<CR>
 
 
 " map alt+j, alt+k to move line up or down
@@ -313,14 +321,6 @@ set completeopt=menu,longest,menuone
 "highlight PmenuSel guibg=white guifg=gray
 "---------------------------------------------------------
 
-"hi def link VimwikiLinkT VimwikiLink
-"hi VimwikiLink guifg=#80a0ff gui=bold
-hi VimwikiLink guifg=#80a0ff 
-
-let g:vimwiki_hl_cb_checked = 2
-
-
-
 " ------------------------------- :call GetSyntax() to get current hi group
 function! GetSyntaxID()
     return synID(line('.'), col('.'), 1)
@@ -335,4 +335,3 @@ function! GetSyntax()
     exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
 endfunction
 "-------------------------------------------------------------------------
-let g:vimwiki_folding='expr'
