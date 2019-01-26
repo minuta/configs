@@ -238,6 +238,11 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" remove fzf status line
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
 " remove netrw help banner
 let g:netrw_banner = 0
 " set tree view
@@ -335,3 +340,9 @@ function! GetSyntax()
     exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
 endfunction
 "-------------------------------------------------------------------------
+
+"augroup VimDiff
+  "autocmd!
+  "autocmd VimEnter,FilterWritePre * if &diff | GitGutterDisable | endif
+"augroup END
+
