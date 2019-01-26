@@ -15,6 +15,7 @@ endif
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -170,13 +171,18 @@ noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
 " Ctrl + F12 : run with waf
 noremap <silent> <F36> :!/home/qp/Projects/ns-3.29/waf --run %< <cr>
 
-let g:gitgutter_sign_removed_first_line = "^_"
+"let g:gitgutter_async = 0
+let g:gitgutter_sign_removed_first_line = '^'
 
 " GitGutter styling to use · instead of +/-
 let g:gitgutter_sign_added = '█'
 let g:gitgutter_sign_modified = '█'
 let g:gitgutter_sign_removed = '█'
 let g:gitgutter_sign_modified_removed ='█'
+
+" vim-gitgutter : set update time to 100ms
+set updatetime=10
+
 
 map <F3> :bprevious<CR>
 map <F4> :bnext<CR>
@@ -192,9 +198,6 @@ set nostartofline
 
 " compile latex, make a pdf and open this pdf (Ctrl + F9)
 autocmd FileType tex map <F33> :cd ~/Projects/my-github-repos/thesis-script <CR>:!make <CR>
-
-" vim-gitgutter : set update time to 100ms
-set updatetime=10 
 
 let g:argwrap_wrap_closing_brace = 0
 
