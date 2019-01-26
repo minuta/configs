@@ -190,7 +190,6 @@ nnoremap <F2> :buffers<CR>:buffer<Space>
 
 tnoremap <Esc> <C-\><C-n>:q!<CR>
 
-set noshowmode   " don't show current vim mode in the status line
 
 set number
 set nostartofline
@@ -346,3 +345,4 @@ endfunction
   "autocmd VimEnter,FilterWritePre * if &diff | GitGutterDisable | endif
 "augroup END
 
+set noshowmode   " don't show current vim mode in the status line
