@@ -348,3 +348,4 @@ endfunction
 set noshowmode   " don't show current vim mode in the status line
 
 set formatoptions=croql " repeat commenting for a new line 
+set colorcolumn=80
