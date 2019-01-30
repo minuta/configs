@@ -349,3 +349,9 @@ set noshowmode   " don't show current vim mode in the status line
 
 set formatoptions=croql " repeat commenting for a new line 
 set colorcolumn=80
+
+
+" disable linting on TEX files
+let g:ale_pattern_options = {
+\   '.*\.tex$': {'ale_enabled': 0},
+\}
