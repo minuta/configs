@@ -118,7 +118,7 @@ set splitright  " open splits to the right
 
 silent! map <C-d> :TagbarToggle<CR>
 
-map <C-h> :nohl<cr>
+noremap <A-h> :nohl<cr>
 
 " map jumping to previous buffer (Ctrl-6) to Backspace
 map <BS> :bprev<Return>
@@ -361,3 +361,5 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+
