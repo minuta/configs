@@ -355,3 +355,9 @@ set colorcolumn=80
 let g:ale_pattern_options = {
 \   '.*\.tex$': {'ale_enabled': 0},
 \}
+
+" remap moving between splits to Control+<direction>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
