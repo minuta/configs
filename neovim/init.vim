@@ -43,6 +43,7 @@ Plug 'w0rp/ale'                     " plugin for providing linting
 
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}   " intellisense engine and completion framework
 
+Plug 'mhinz/vim-startify'
 call plug#end() 
 "------------------------------------------------------------------------------
 
