@@ -349,7 +349,7 @@ endfunction
 set noshowmode   " don't show current vim mode in the status line
 
 set formatoptions=croql " repeat commenting for a new line 
-set colorcolumn=80
+"set colorcolumn=80
 
 
 " disable linting on TEX files
@@ -367,3 +367,22 @@ nnoremap <C-H> <C-W><C-H>
 set fillchars=fold:\     " remove ugly dashed line in folds
 "hi Folded guifg=#31A8CF
 hi Folded guifg=#629B4B  " change foreground color of fold name
+
+" Toggle 80 column marker
+nnoremap <A-l> :call ToggleColorColumn()<CR>
+"
+func! ToggleColorColumn()
+    if exists("b:colorcolumnon") && b:colorcolumnon
+        let b:colorcolumnon = 0
+        exec ':set colorcolumn=0'
+        echo ''
+"         echo '80 column marker off'
+    else
+        let b:colorcolumnon = 1
+        exec ':set colorcolumn=80'
+        echo ''
+"         echo '80 column marker on'
+    endif
+endfunc
+
+
