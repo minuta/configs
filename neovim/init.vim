@@ -364,3 +364,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
+set fillchars=fold:\     " remove ugly dashed line in folds
+"hi Folded guifg=#31A8CF
+hi Folded guifg=#629B4B  " change foreground color of fold name
