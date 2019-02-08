@@ -394,10 +394,19 @@ hi StatusLine   ctermfg=15  guifg=#46F352 ctermbg=237 guibg=#3a3a3a cterm=bold g
 hi StatusLineNC ctermfg=7   guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 
 " Formats the statusline
-set statusline=%f                           " file name
-set statusline +=\ %{fugitive#statusline()}
+set laststatus=2
+set statusline=
+"set statusline+=\      " place a whitespace 
+"set statusline+=%#PmenuSel#
+
+set statusline +=%{fugitive#statusline()}
+"set statusline+=%*       "switch back to normal statusline highlight
+set statusline+=\ \ %f
+set statusline+=\ %m
+set statusline+=\ %r
 
 set statusline+=\ %=                        " align left
 set statusline+=%p%%            " line X of Y [percent of file]
 
+set statusline+=\ 
 " ------------------------------------------------------------------------------
