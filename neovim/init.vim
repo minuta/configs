@@ -395,6 +395,7 @@ hi StatusLineNC ctermfg=7   guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none g
 
 " Formats the statusline
 set statusline=%f                           " file name
+set statusline +=\ %{fugitive#statusline()}
 
 set statusline+=\ %=                        " align left
 set statusline+=%p%%            " line X of Y [percent of file]
