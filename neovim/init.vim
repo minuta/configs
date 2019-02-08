@@ -398,7 +398,7 @@ hi StatusLineNC guifg=#FFFFFF guibg=#201D20 gui=bold
 " Formats the statusline
 "hi User1 guibg=#3a3a3a guifg=pink
 
-set laststatus=2
+"set laststatus=2
 set statusline=
 "set statusline+=\      " place a whitespace 
 "set statusline+=%#PmenuSel#
@@ -415,4 +415,10 @@ set statusline+=\ %=                        " align left
 set statusline+=%p%%            " line X of Y [percent of file]
 
 set statusline+=\ 
+" ------------------------------------------------------------------------------
+
+
+" search color" ----------------------------------------------------------------
+highlight IncSearch guibg=#B1DFE0 guifg=black 
+highlight Search guibg=#B1DFE0 guifg=black 
 " ------------------------------------------------------------------------------
