@@ -56,6 +56,7 @@ set ruler  " always show cursor position
 set nowrap
 set mouse=a
 
+
 "set foldmethod=manual
 set foldlevel=1
 set foldnestmax=1
@@ -128,11 +129,6 @@ map <BS> :bprev<Return>
 " highlight the line number where cursor is on
 "highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 "set cursorline
-
-" status line
-"hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
-"hi StatusLineNC ctermfg=7 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
-
 
 " C++ features
 " switch between c++ header file and class file (works if header and cpp are
@@ -388,3 +384,19 @@ endfunc
 
 let g:startify_bookmarks = [ {'v': '~/.config/nvim/init.vim'}, {'z': '~/.zshrc'} ]
 nnoremap <A-s> :Startify<CR>
+
+
+" statusline configs " ---------------------------------------------------------
+set laststatus=2
+
+" status line color
+hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
+hi StatusLineNC ctermfg=7 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+
+" Formats the statusline
+set statusline=%f                           " file name
+
+set statusline+=\ %=                        " align left
+set statusline+=%p%%            " line X of Y [percent of file]
+
+" ------------------------------------------------------------------------------
