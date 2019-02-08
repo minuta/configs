@@ -387,11 +387,11 @@ nnoremap <A-s> :Startify<CR>
 
 
 " statusline configs " ---------------------------------------------------------
-set laststatus=2
+"set laststatus=2
 
 " status line color
-hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
-hi StatusLineNC ctermfg=7 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+hi StatusLine   ctermfg=15  guifg=#46F352 ctermbg=237 guibg=#3a3a3a cterm=bold gui=bold
+hi StatusLineNC ctermfg=7   guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 
 " Formats the statusline
 set statusline=%f                           " file name
