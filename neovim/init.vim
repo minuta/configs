@@ -35,6 +35,7 @@ Plug 'kshenoy/vim-signature'           " plugin to place, toggle and display mar
 Plug 'joshdick/onedark.vim/'
 
 
+"Plug 'google/vim-searchindex'
 Plug 'henrik/vim-indexed-search'
 Plug 'vimwiki/vimwiki'
 
