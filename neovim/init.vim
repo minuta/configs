@@ -420,3 +420,11 @@ set statusline+=\
 highlight IncSearch guibg=#B1DFE0 guifg=black 
 highlight Search guibg=#B1DFE0 guifg=black 
 " ------------------------------------------------------------------------------
+
+" redesign highlighting of Diff-Groups, 'cause it's ugly made in onedark 
+" color scheme
+if &diff
+    "highlight! link DiffText MatchParen
+    "highlight! link DiffText DiffChange
+    highlight! link DiffChange WarningMsg
+endif
