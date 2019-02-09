@@ -390,10 +390,9 @@ nnoremap <A-s> :Startify<CR>
 "set laststatus=2
 
 " status line color
-"hi StatusLine   ctermfg=15  guifg=#46F352 ctermbg=237 guibg=#3a3a3a cterm=bold gui=bold
-hi StatusLine   guifg=#46F352 guibg=#1A181A gui=bold
-"hi StatusLineNC guifg=#b2b2b2 guibg=#201D20 gui=none
-hi StatusLineNC guifg=#FFFFFF guibg=#201D20 gui=bold
+"hi StatusLine   guifg=#46F352 guibg=#1A181A gui=bold
+hi StatusLine   guifg=#46F352 guibg=#201D20 gui=bold
+hi StatusLineNC guifg=#FFFFFF guibg=#201D20 gui=none
 
 " Formats the statusline
 "hi User1 guibg=#3a3a3a guifg=pink
