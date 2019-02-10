@@ -217,6 +217,8 @@ let mapleader = "\<Space>"
 "use plugin fzf to get MRU files
 map <c-p> :History<CR>
 
+let g:fzf_layout = {'window': 'rightbelow new'}
+
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
