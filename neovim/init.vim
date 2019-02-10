@@ -148,7 +148,7 @@ let g:ack_autoclose = 1
 
 " FZF plugin configuration
 cnoreabbrev fzf FZF
-nnoremap <Leader>f :FZF<cr>
+"nnoremap <Leader>f :FZF<cr>
 
 " compile only current C++ file with Ctrl+F9
 "noremap <silent> <F33> :!clear<CR> :!g++ -Wall -std=c++11 % -o %< && ./%< <cr>
@@ -308,7 +308,7 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
 " call fzf from current dir
-map ; :Files<CR>
+"map ; :Files<CR>
 
 
 let g:ale_list_window_size = 5
@@ -430,3 +430,6 @@ if &diff
     "highlight! link DiffText DiffChange
     highlight! link DiffChange WarningMsg
 endif
+
+" open all folds
+nnoremap <Space><Space> zR
