@@ -109,10 +109,10 @@ colorscheme onedark
 set splitbelow " open splits below
 set splitright  " open splits to the right
 
-"nnoremap <left> :vertical resize +1<cr>
-"nnoremap <right> :vertical resize -1<cr>
-"nnoremap <up> :resize +1<cr>
-"nnoremap <down> :resize -1<cr>
+nnoremap <left> :vertical resize +1<cr>
+nnoremap <right> :vertical resize -1<cr>
+nnoremap <up> :resize +1<cr>
+nnoremap <down> :resize -1<cr>
 
 
 " Shortcuts and configs for plugins
@@ -392,7 +392,7 @@ nnoremap <A-s> :Startify<CR>
 
 " status line color
 "hi StatusLine   guifg=#46F352 guibg=#1A181A gui=bold
-hi StatusLine   guifg=#46F352 guibg=#201D20 gui=bold
+hi StatusLine   guifg=#46F352 guibg=#201D20 gui=none
 hi StatusLineNC guifg=#FFFFFF guibg=#201D20 gui=none
 
 " Formats the statusline
