@@ -431,9 +431,13 @@ if &diff
     highlight! link DiffChange WarningMsg
 endif
 
+
 " open all folds
 nnoremap <Space><Space> zR
 
 " type "sw" to swap current and next word
 nnoremap sw hdeep
 
+" some useful configs for handling vim sessions
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
