@@ -441,3 +441,9 @@ nnoremap sw hdeep
 " some useful configs for handling vim sessions
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
+
+
+" set color for marks
+hi mark_color guifg=#46F352 gui=bold
+let g:SignatureMarkTextHL = "mark_color"
+"let g:SignatureMarkTextHLDynamic = 1
