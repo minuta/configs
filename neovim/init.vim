@@ -433,3 +433,7 @@ endif
 
 " open all folds
 nnoremap <Space><Space> zR
+
+" type "sw" to swap current and next word
+nnoremap sw hdeep
+
