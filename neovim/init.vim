@@ -383,7 +383,7 @@ func! ToggleColorColumn()
 endfunc
 
 
-let g:startify_bookmarks = [ {'v': '~/.config/nvim/init.vim'}, {'z': '~/.zshrc'} ]
+let g:startify_bookmarks = [ {'v': '~/.config/nvim/init.vim'}, {'z': '~/.zshrc'}, {'s': '~/session.vim'}]
 nnoremap <A-s> :Startify<CR>
 
 
