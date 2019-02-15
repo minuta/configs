@@ -126,8 +126,8 @@ map <BS> :bprev<Return>
 
 
 " highlight the line number where cursor is on
-"highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
-"set cursorline
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=BOLD
+set cursorline
 
 " C++ features
 " switch between c++ header file and class file (works if header and cpp are
@@ -446,4 +446,3 @@ set ssop-=folds      " do not store folds
 " set color for marks
 hi mark_color guifg=#46F352 gui=bold
 let g:SignatureMarkTextHL = "mark_color"
-"let g:SignatureMarkTextHLDynamic = 1
