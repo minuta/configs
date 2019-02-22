@@ -152,20 +152,26 @@ cnoreabbrev fzf FZF
 
 " compile only current C++ file with Ctrl+F9
 "noremap <silent> <F33> :!clear<CR> :!g++ -Wall -std=c++11 % -o %< && ./%< <cr>
-noremap <silent> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
+"noremap <silent> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
 
 " compile only current C file with Ctrl+F9
 "noremap <silent> <F33> :!clear<CR> :!gcc -Wall -std=c11 % -o %< && ./%< <cr>
 
 " run current C or C++ file with Ctrl+F10
-noremap <silent> <F34> :!clear<cr> :!./%< <cr>
+"noremap <silent> <F34> :!clear<cr> :!./%< <cr>
 
 
 " Ctrl + F11 : compile with waf
-noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
+"noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
+"
+
+" Ctrl + F9 : run a C++ or python script
+"noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
+autocmd FileType python nnoremap <buffer> <F33> :exec '!python' shellescape(@%, 1)<cr>
+autocmd FileType cpp nnoremap <buffer> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
 
 " Ctrl + F12 : run with waf
-noremap <silent> <F36> :!/home/qp/Projects/ns-3.29/waf --run %< <cr>
+"noremap <silent> <F36> :!/home/qp/Projects/ns-3.29/waf --run %< <cr>
 
 "let g:gitgutter_async = 0
 let g:gitgutter_sign_removed_first_line = '^'
