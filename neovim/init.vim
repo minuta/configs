@@ -452,3 +452,8 @@ set ssop-=folds      " do not store folds
 " set color for marks
 hi mark_color guifg=#46F352 gui=bold
 let g:SignatureMarkTextHL = "mark_color"
+
+" open file under sursor in vertical split with Ctrl + wf
+nnoremap <C-W>f <C-W>v gf
+vnoremap <C-W>f <C-W>v gf
+
