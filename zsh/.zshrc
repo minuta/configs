@@ -53,7 +53,7 @@ ZSH_THEME="nicoulaj"
 # Add wisely, as too many plugins slow down shell startup.
 #
 #plugins=(git python command-not-found fancy-ctrl-z fzf zsh-autosuggestions)
-plugins=( git python command-not-found fancy-ctrl-z fzf )
+plugins=( git python command-not-found fancy-ctrl-z fzf z extract)
 
 # User configuration
 
