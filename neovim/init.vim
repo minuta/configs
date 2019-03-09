@@ -457,3 +457,4 @@ let g:SignatureMarkTextHL = "mark_color"
 nnoremap <C-W>f <C-W>v gf
 vnoremap <C-W>f <C-W>v gf
 
+hi Todo guifg=red gui=bold
