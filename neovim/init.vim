@@ -458,3 +458,6 @@ nnoremap <C-W>f <C-W>v gf
 vnoremap <C-W>f <C-W>v gf
 
 hi Todo guifg=red gui=bold
+
+" map Control + W + b to open a horizontal split
+nnoremap <C-W>b :sp<CR>
