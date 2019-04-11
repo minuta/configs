@@ -9,13 +9,23 @@
   layout_launcher = <Alt>slash
 [layouts]
   [[default]]
-    [[[child1]]]
-      parent = window0
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 83428ec4-ca59-4010-866e-4753b890a643
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 306:224
+      size = 856, 690
+      title = qp@box: ~
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
       profile = default
       type = Terminal
-    [[[window0]]]
-      parent = ""
-      type = Window
+      uuid = 83428ec4-ca59-4010-866e-4753b890a643
 [plugins]
 [profiles]
   [[default]]
