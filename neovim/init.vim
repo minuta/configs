@@ -167,8 +167,9 @@ cnoreabbrev fzf FZF
 
 " Ctrl + F9 : run a C++ or python script
 "noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
-autocmd FileType python nnoremap <buffer> <F33> :exec '!python' shellescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> <F33> :exec '!python3' shellescape(@%, 1)<cr>
 autocmd FileType cpp nnoremap <buffer> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
+autocmd FileType java nnoremap <buffer> <F33> :!javac % && java %< <cr>
 
 " Ctrl + F12 : run with waf
 "noremap <silent> <F36> :!/home/qp/Projects/ns-3.29/waf --run %< <cr>
