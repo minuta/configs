@@ -40,7 +40,7 @@ Plug 'vimwiki/vimwiki'
 let g:ale_completion_enabled = 1
 Plug 'w0rp/ale'                     " plugin for providing linting
 
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}   " intellisense engine and completion framework
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch
 
 Plug 'mhinz/vim-startify'
 call plug#end() 
