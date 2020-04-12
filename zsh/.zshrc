@@ -113,13 +113,9 @@ export LESS_TERMCAP_us=$(tput bold; tput setaf 1) # red parameters
 
 # bindkey -v
 
-# export EDITOR=/usr/bin/nvim
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 path+='/home/qp/.fzf'
-#path+='/home/qp/Projects/bluepill_application_loader/build'
-path+='/home/qp/Projects/ns-3.29/build/lib'
 
 #autoload predict-on
 #predict-on
@@ -142,21 +138,11 @@ alias xclip='xclip -se c'
 alias rm='rm -i'
 alias cdc='cd -'
 
-alias nvim='~/Software/nvim.appimage'
+# alias nvim='~/Software/nvim.appimage'
 alias v='nvim'
 #alias vim='vim'
-alias cdg='cd ~/Projects/ns-3.29/src/grail/ && pwd'
-alias cdn='cd ~/Projects/ns-3.29/ && pwd'
-
-alias emacs='emacs -nw'
-
-#alias rr='LD_LIBRARY_PATH=~/Projects/ns-3.29/build'
 
 setopt hist_ignore_all_dups
-
-#export LD_LIBRARY_PATH=/home/qp/Projects/bluepill_application_loader/build
-
-alias waf='~/Projects/ns-3.29/waf'
 
 alias topten="history | commands | sort -rn | head"
 #alias vimdiff='nvim -d'
