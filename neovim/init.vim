@@ -21,9 +21,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " C++ plugins
-Plug 'majutsushi/tagbar'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'bfrg/vim-cpp-modern'
+"Plug 'majutsushi/tagbar'
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'bfrg/vim-cpp-modern'
 
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'            " automatic closing of quotes, parenthesis, brackets, etc
@@ -37,8 +37,8 @@ Plug 'joshdick/onedark.vim/'
 Plug 'henrik/vim-indexed-search'
 Plug 'vimwiki/vimwiki'
 
-let g:ale_completion_enabled = 1
-Plug 'w0rp/ale'                     " plugin for providing linting
+"let g:ale_completion_enabled = 1
+"Plug 'w0rp/ale'                     " plugin for providing linting
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch
 
