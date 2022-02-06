@@ -1,3 +1,4 @@
+
 [user]
 	name = minuta
     email = "gammamustang@gmail.com"
@@ -9,13 +10,11 @@
 
     # Commits
     cm = commit -m
-    ;ca = !git add -A && git commit -m
+    ca = !git add -A && git commit -m
 
     st = status
     br = branch
-    
-    type = cat-file -t
-    dump = cat-file -p
+    dt = difftool
 
     lg = log --graph --abbrev-commit --decorate --format=format:'%C(dim white)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset)  %C(blue) %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     
@@ -27,15 +26,6 @@
     # show changes in fetched commits for a given file:
     sff = diff --name-status HEAD..origin
 
-	dt = difftool
-
-    # -----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-[merge]
-    tool = code
-
-[diff]
-	tool = code
 
 [color]
 	ui = true
@@ -56,11 +46,24 @@
     changed = yellow bold
     untracked = red bold
 
-[difftool]
-	prompt = false
 
 [push]
 	default = simple
 
 [init]
 	defaultBranch = main
+
+[core]
+    editor = code --wait
+
+[diff]
+    tool = vscode
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+    tool = vscode
+
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
