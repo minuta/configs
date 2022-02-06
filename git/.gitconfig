@@ -16,8 +16,8 @@
     br = branch
     sw = switch
     dt = difftool
-    df = diff
-    dfs = diff --staged
+    df = diff --color-words
+    dfs = diff --color-words --staged
 
     pu = push
     pl = pull
@@ -46,12 +46,24 @@
 
 [color "status"]
     added = green bold
-    changed = yellow bold
+    changed = blue bold
     untracked = red bold
 
 
-;[push]
-;	default = simple
+[status]
+    showUntrackedFiles = all
+
+[transfer]
+    fsckobjects = true 
+
+[push]
+	default = simple
+    
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
 
 [init]
 	defaultBranch = main
@@ -60,13 +72,14 @@
     editor = code --wait
 
 [diff]
-    tool = vscode
+    tool = code
+	colorMoved = zebra
 
-[difftool "vscode"]
+[difftool "code"]
     cmd = code --wait --diff $LOCAL $REMOTE
 
 [merge]
-    tool = vscode
+    tool = code
 
-[mergetool "vscode"]
+[mergetool "code"]
     cmd = code --wait $MERGED
