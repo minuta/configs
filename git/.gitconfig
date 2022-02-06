@@ -27,9 +27,6 @@
     sff = diff --name-status HEAD..origin
 
 
-[color]
-	ui = true
-
 [core]
 	autocrlf = input
 	safecrlf = false
