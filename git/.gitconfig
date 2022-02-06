@@ -44,8 +44,8 @@
     untracked = red bold
 
 
-[push]
-	default = simple
+;[push]
+;	default = simple
 
 [init]
 	defaultBranch = main
