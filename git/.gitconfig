@@ -17,6 +17,9 @@
     sw = switch
     dt = difftool
 
+    pu = push
+    pl = pull
+
     lg = log -20 --graph --abbrev-commit --decorate --format=format:'%C(dim white)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset)  %C(blue) %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     
     # show all files from commit hash (e.g. fi <HASH>)
