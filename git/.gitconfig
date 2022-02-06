@@ -16,6 +16,8 @@
     br = branch
     sw = switch
     dt = difftool
+    df = diff
+    dfs = diff --staged
 
     pu = push
     pl = pull
