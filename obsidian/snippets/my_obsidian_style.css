@@ -1,0 +1,51 @@
+
+/* My custom CSS styling for the default Obsidian dark theme 
+   
+   Customization:
+   - Header colors
+   - Title color
+   - Strike-through color
+   - Underline color
+   - Bold color
+   - Highlight color
+*/
+
+
+/* Headers */
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5 {
+    color: #77a7ce;
+}
+
+/* Note title */
+.inline-title {
+    color: #8b8df1;
+}
+
+/* strike-through text with ~~foo~~  */
+.cm-strikethrough {
+    color: #494746;
+}
+
+/* italic/emphize text with _foo_ or *foo* */ 
+.cm-em {
+    /* color: #dae295; */
+    color: #f8a1a1;
+    font-style: normal;
+}
+
+/* bold text with **foo** or __foo__ */
+.cm-strong {
+    color: #baca8c;
+    font-weight: bold;
+}
+
+/* highlight text with ==foo== */
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+  background-color:#a09c6c;
+  color:#000000;
+}

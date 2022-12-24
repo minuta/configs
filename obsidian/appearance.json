@@ -1,0 +1,8 @@
+{
+  "accentColor": "#7993a4",
+  "theme": "obsidian",
+  "baseFontSize": 15,
+  "enabledCssSnippets": [
+    "my_obsidian_style"
+  ]
+}
