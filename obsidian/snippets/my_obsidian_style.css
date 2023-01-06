@@ -1,4 +1,3 @@
-
 /* My custom CSS styling for the default Obsidian dark theme 
    
    Customization:
@@ -8,8 +7,8 @@
    - Underline color
    - Bold color
    - Highlight color
+   - remove strikethrough for checkboxes
 */
-
 
 /* Headers */
 .cm-header-1,
@@ -17,35 +16,45 @@
 .cm-header-3,
 .cm-header-4,
 .cm-header-5 {
-    color: #77a7ce;
+  color: #77a7ce;
 }
 
 /* Note title */
 .inline-title {
-    color: #8b8df1;
+  color: #8b8df1;
 }
 
 /* strike-through text with ~~foo~~  */
 .cm-strikethrough {
-    color: #494746;
+  color: #494746;
 }
 
-/* italic/emphize text with _foo_ or *foo* */ 
+/* italic/emphize text with _foo_ or *foo* */
 .cm-em {
-    /* color: #dae295; */
-    color: #f8a1a1;
-    font-style: normal;
+  /* color: #dae295; */
+  color: #f8a1a1;
+  font-style: normal;
 }
 
 /* bold text with **foo** or __foo__ */
 .cm-strong {
-    color: #baca8c;
-    font-weight: bold;
+  color: #baca8c;
+  font-weight: bold;
 }
 
 /* highlight text with ==foo== */
 .cm-s-obsidian span.cm-formatting-highlight,
 .cm-s-obsidian span.cm-highlight {
-  background-color:#a09c6c;
-  color:#000000;
+  background-color: #a09c6c;
+  color: #000000;
+}
+
+/* <<------------- Hide Strikethrough in READING VIEW ----------------->> */
+.markdown-preview-view ul > li.task-list-item {
+  text-decoration: none;
+}
+
+/* <<------------- Hide Strikethrough in LIVE PREVIEW ----------------->> */
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
+  text-decoration: none;
 }
