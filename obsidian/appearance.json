@@ -4,5 +4,6 @@
   "baseFontSize": 15,
   "enabledCssSnippets": [
     "my_obsidian_style"
-  ]
+  ],
+  "translucency": true
 }
