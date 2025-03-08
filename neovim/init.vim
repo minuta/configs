@@ -14,18 +14,15 @@ endif
 "------------------------- PLUG -----------------------------------------------
 call plug#begin()
 
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'mileszs/ack.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'airblade/vim-gitgutter'  " show colorful markers for git diff
+Plug 'tpope/vim-fugitive'      " plugin for working with git directly from NeoVim
+Plug 'mileszs/ack.vim'         " a grep like tool for working from NeoVim
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " FZF is a tool for searching files
 Plug 'junegunn/fzf.vim'
 
-" C++ plugins
-"Plug 'majutsushi/tagbar'
-"Plug 'ludovicchabant/vim-gutentags'
-"Plug 'bfrg/vim-cpp-modern'
-
-Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'        " better comments
 Plug 'Raimondi/delimitMate'            " automatic closing of quotes, parenthesis, brackets, etc
 Plug 'kshenoy/vim-signature'           " plugin to place, toggle and display marks.
 
@@ -35,14 +32,14 @@ Plug 'kshenoy/vim-signature'           " plugin to place, toggle and display mar
 Plug 'joshdick/onedark.vim/'
 
 Plug 'henrik/vim-indexed-search'
-Plug 'vimwiki/vimwiki'
+"Plug 'vimwiki/vimwiki'
 
 "let g:ale_completion_enabled = 1
 "Plug 'w0rp/ale'                     " plugin for providing linting
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (recommended)
 
-Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'   "a fancy start for the NeoVim session"
 call plug#end() 
 "------------------------------------------------------------------------------
 
@@ -132,11 +129,11 @@ set cursorline
 " C++ features
 " switch between c++ header file and class file (works if header and cpp are
 " in the same directory)
-nnoremap <Space>h :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+"nnoremap <Space>h :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " set path for using with gf
-let &path.="/src/include,/usr/include/AL,/usr/include/c++/7,"
-set path+=/home/qp/Projects/ns-3.29/build/ 
+"let &path.="/src/include,/usr/include/AL,/usr/include/c++/7,"
+"set path+=/home/qp/Projects/ns-3.29/build/ 
 
 " Ack and Ag plugin configuration
 let g:ackprg = 'ag --column --nocolor --nogroup'
@@ -167,9 +164,9 @@ cnoreabbrev fzf FZF
 
 " Ctrl + F9 : run a C++ or python script
 "noremap <silent> <F35> :!/home/qp/Projects/ns-3.29/waf<cr>
-autocmd FileType python nnoremap <buffer> <F33> :exec '!python3' shellescape(@%, 1)<cr>
-autocmd FileType cpp nnoremap <buffer> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
-autocmd FileType java nnoremap <buffer> <F33> :!javac % && java %< <cr>
+"autocmd FileType python nnoremap <buffer> <F33> :exec '!python3' shellescape(@%, 1)<cr>
+"autocmd FileType cpp nnoremap <buffer> <F33> :!clear<CR> :!g++ -std=c++11 -pthread % -o %< && ./%< <cr>
+"autocmd FileType java nnoremap <buffer> <F33> :!javac % && java %< <cr>
 
 " Ctrl + F12 : run with waf
 "noremap <silent> <F36> :!/home/qp/Projects/ns-3.29/waf --run %< <cr>
@@ -197,9 +194,6 @@ tnoremap <Esc> <C-\><C-n>:q!<CR>
 set number
 set nostartofline
 
-
-" compile latex, make a pdf and open this pdf (Ctrl + F9)
-autocmd FileType tex map <F33> :cd ~/Projects/my-github-repos/thesis-script <CR>:!make <CR>
 
 let g:argwrap_wrap_closing_brace = 0
 
@@ -355,11 +349,6 @@ set noshowmode   " don't show current vim mode in the status line
 set formatoptions=croql " repeat commenting for a new line 
 "set colorcolumn=80
 
-
-" disable linting on TEX files
-let g:ale_pattern_options = {
-\   '.*\.tex$': {'ale_enabled': 0},
-\}
 
 " remap moving between splits to Control+<direction>
 nnoremap <C-J> <C-W><C-J>
