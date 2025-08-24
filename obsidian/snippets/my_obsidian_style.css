@@ -59,3 +59,30 @@
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
   text-decoration: none;
 }
+
+
+
+table {
+    background-color: #303030; 
+    /* border: 4px solid #000000;  */
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.18);
+
+}
+
+thead {
+    background-color: #433857;
+    color: white;
+}
+
+td {
+  border: 1px solid rgb(60, 60, 60); /* Base border */
+  outline: 1px solid rgb(60, 60, 60); /* Thicker illusion */
+}
+
+/* td {
+    font-size: 16px;  
+    background-color: #303030; 
+    color: black;
+} */
+
+
