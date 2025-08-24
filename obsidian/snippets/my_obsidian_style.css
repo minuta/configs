@@ -62,27 +62,27 @@
 
 
 
+
+/* --------------- Table Definitions ---------------------*/
 table {
     background-color: #303030; 
     /* border: 4px solid #000000;  */
-    box-shadow: 8px 8px 16px rgba(0,0,0,0.18);
+    /* box-shadow: 8px 8px 10px rgba(129, 125, 125, 0.18); */
 
+    /* make round corners */
+    border-collapse: separate; /* Needed for border-radius to apply */
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures corners are clipped if there's a background */
+    width: 100%; /* Optional: sets table width */
 }
 
 thead {
     background-color: #433857;
     color: white;
+    outline: 1px solid rgb(63, 63, 63);   /* Thicker illusion */
 }
 
 td {
-  border: 1px solid rgb(60, 60, 60); /* Base border */
-  outline: 1px solid rgb(60, 60, 60); /* Thicker illusion */
-}
-
-/* td {
-    font-size: 16px;  
-    background-color: #303030; 
-    color: black;
-} */
-
-
+  outline: 1px solid rgb(63, 63, 63);   /* Thicker illusion */
+}  
