@@ -86,3 +86,36 @@ thead {
 td {
   outline: 1px solid rgb(63, 63, 63);   /* Thicker illusion */
 }  
+
+
+/* ----- add visible border line and round corners to the code block ------  */
+
+/* reading mode */
+.markdown-rendered pre {
+  border: solid #494746;
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-lm-only);
+}
+
+/* live preview */
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  background: var(--code-background);
+  border-top: solid #494746;
+  /* stylelint-disable-next-line declaration-no-important */
+  border-top-right-radius: 8px !important;
+  /* stylelint-disable-next-line declaration-no-important */
+  border-top-left-radius: 8px !important;
+  margin-top: 8px;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  background: var(--code-background);
+  border-bottom: solid #494746;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  border-right: solid #494746;
+  border-left: solid #494746;
+}
